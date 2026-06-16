@@ -67,20 +67,42 @@ body {
 /* Profile section */
 .profile {
     text-align: center;
+    position: relative;
+    padding-top: 80px; /* Make space so avatar overlaps the cover photo */
+}
+
+.cover-photo {
+    position: absolute;
+    top: -2rem; /* Stretch slightly out of container padding */
+    left: -1rem;
+    width: calc(100% + 2rem);
+    height: 160px;
+    background-image: url('promo.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 20px 0 0;
+    z-index: -1;
+    /* Fade out the bottom of the cover photo into the background */
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    opacity: 0.8;
 }
 
 .avatar-container {
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    object-position: center 15%; /* Moves focus towards the top/face */
+    border: 4px solid #1a153a; /* Dark border to separate from cover */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
+    background-color: #1a153a;
 }
 
 .avatar:hover {
