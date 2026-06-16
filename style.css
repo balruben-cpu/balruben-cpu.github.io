@@ -16,16 +16,21 @@
     padding: 0;
 }
 
+html {
+    background-color: #0f0c29;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     background: var(--bg-color);
     background: var(--bg-gradient);
+    background-attachment: fixed;
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
+    align-items: flex-start;
+    padding: 4rem 1rem 2rem 1rem;
     position: relative;
     overflow-x: hidden;
 }
